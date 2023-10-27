@@ -1,3 +1,8 @@
+# 정상 작동하는 소스코드로 수정합니다 .
+
+해당 프로젝트는 [deploy/generic-k8s/ecommerce-app](./deploy/generic-k8s/ecommerce-app) 에 
+advertisements.yaml, db.yaml, discounts.yaml, frontend.yaml 이 4개의 yaml 로 구성되어있습니다.
+
 
 # eCommerce Observability in Practice
 
