@@ -4,6 +4,8 @@
 advertisements.yaml, db.yaml, discounts.yaml, frontend.yaml 이 4개의 yaml 로 구성되어있습니다.
 
 
+ecommerce-workshop\store-frontend\ 해당 경로에서 docker build 를 하세요
+
 # eCommerce Observability in Practice
 
 This is a repo demonstrating applying observability principals to an eCommerce app.
