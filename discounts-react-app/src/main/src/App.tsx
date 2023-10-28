@@ -1,5 +1,5 @@
 import React from 'react';
-import Nav from './components/Nav';
+import Nav from './components/Nav.1';
 import Advertisement from './components/Advertisement';
 import DiscountList from './components/DiscountList';
 
