@@ -45,4 +45,13 @@
     </div>
   </div>
 <% end %>
- <br /><center><a href="<%= @ads['url'] %>"><img src="data:image/png;base64,<%= @ads['base64'] %>" /></a></center>
+<% if @ads && @ads['url'] && @ads['base64'] %>
+  <center>
+    <a href="<%= @ads['url'] %>">
+      <img src="data:image/png;base64,<%= @ads['base64'] %>" />
+    </a>
+  </center>
+<% else %>
+  <!-- @ads가 없거나 필요한 정보가 누락된 경우에 "광고가 없습니다" 문구를 표시합니다. -->
+  <center>광고가 없습니다</center>
+<% end %>

@@ -67,7 +67,7 @@ spec:
         #   value: <your_client_token>
         # - name: DD_APPLICATION_ID
         #   value: <your_application_id>
-        image: public.ecr.aws/q4d5d7v1/dakill:latest@sha256:931b33a9fe6c0c3d44b4fa63167c4cebd8d13a5bbf58a17d26b363f5746b7e4d 
+        image: public.ecr.aws/q4d5d7v1/dakill:front-end-test-1@sha256:bbecf37aff8aa21a1342d133eba00c242fdd3e376b4cce835a83e5906d73c8b2 
         imagePullPolicy: Always
         name: ecommerce-spree-observability
         ports:
@@ -92,7 +92,7 @@ spec:
     - port: 80
       protocol: TCP
       targetPort: 3000
-      nodePort: 8080
+      nodePort: 30050
       name: http
   selector:
     tags.datadoghq.com/service: storefront

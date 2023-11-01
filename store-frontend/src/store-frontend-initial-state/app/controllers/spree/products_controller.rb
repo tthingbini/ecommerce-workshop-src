@@ -22,8 +22,20 @@ module Spree
       @product_properties = @product.product_properties.includes(:property)
       @taxon = params[:taxon_id].present? ? Spree::Taxon.find(params[:taxon_id]) : @product.taxons.first
       redirect_if_legacy_path
-      @ads = helpers.get_ads.sample
-      @ads['base64'] = Base64.encode64(open("#{ENV['ADS_ROUTE']}:#{ENV['ADS_PORT']}/banners/#{@ads['path']}").read).gsub("\n", '')
+
+      begin
+        @ads = helpers.get_ads.sample
+        if @ads.present? && @ads['path'].present?
+          banner_path = URI("#{ENV['ADS_ROUTE']}:#{ENV['ADS_PORT']}/banners/#{@ads['path']}")
+          @ads['base64'] = Base64.encode64(open(banner_path).read).gsub("\n", '')
+        end
+      rescue StandardError => e
+        Rails.logger.error "광고를 불러오는데 오류가 발생했습니다: #{e.message}"
+        @ads = nil
+      end
+
+      # @ads = helpers.get_ads.sample
+      # @ads['base64'] = Base64.encode64(open("#{ENV['ADS_ROUTE']}:#{ENV['ADS_PORT']}/banners/#{@ads['path']}").read).gsub("\n", '')
     end
 
     private
