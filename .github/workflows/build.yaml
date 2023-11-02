@@ -46,6 +46,6 @@ jobs:
           pwd
           cd store-frontend
           pwd
-          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
-          docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
+          docker build -t $ECR_REGISTRY/$ECR_REPOSITORY .
+          docker push $ECR_REGISTRY/$ECR_REPOSITORY:latest
 
