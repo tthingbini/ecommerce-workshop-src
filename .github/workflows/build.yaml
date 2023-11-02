@@ -30,8 +30,8 @@ jobs:
           echo VERSION=$VERSION
           echo "::set-output name=version::$VERSION"
 
-      - name: Change directory to 'store-frontend'
-        run: cd store-frontend
+          #      - name: Change directory to 'store-frontend'
+          # run: cd store-frontend
 
 
       - name: Build, tag, and push image to Amazon ECR
