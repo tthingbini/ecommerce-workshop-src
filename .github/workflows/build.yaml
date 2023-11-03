@@ -56,7 +56,7 @@ jobs:
       - name: Checkout kustomize repository
         uses: actions/checkout@v2
         with:
-          repository: /ecommerce-workshop-k8s-manifest
+          repository:  2MIRACLE-BTC/ecommerce-workshop-k8s-manifest
           ref: main
           token: ${{ secrets.ACTION_TOKEN }}
           path: ecommerce-workshop-k8s-manifest
