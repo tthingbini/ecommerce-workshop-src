@@ -26,7 +26,7 @@ class TestWordsFileFunctions(unittest.TestCase):
 
     def setUp(self):
         with open("testwords.json", "w") as testfile:
-          testfile.write('["hong", "two", "three", "four", "five", "six", "seven", "eight", "nine", "ten"]')
+          testfile.write('["hong", "do", "you", "know", "five", "six", "seven", "eight", "nine", "ten"]')
     
     def tearDown(self):
         os.remove("testwords.json")
