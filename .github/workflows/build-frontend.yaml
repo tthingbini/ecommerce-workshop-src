@@ -2,8 +2,8 @@ name: Build Front
 
 on:
   push:
-		paths: # HERE!
-        - 'store-frontend'  # HERE!
+    paths: # HERE!
+      - 'store-frontend/**'
     branches: [ main ]
 
 jobs:
