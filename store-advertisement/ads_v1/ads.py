@@ -54,7 +54,7 @@ def status():
             advertisements_count = len(Advertisement.query.all())
             new_advertisement = Advertisement('Advertisement ' + str(discounts_count + 1),
                                     '/',
-                                    random.randint(10,498))
+                                    random.randint(10,497))
             app.logger.info(f"Adding advertisement {new_advertisement}")
             db.session.add(new_advertisement)
             db.session.commit()
