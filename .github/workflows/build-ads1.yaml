@@ -3,7 +3,7 @@ name: Build Front
 on:
   push:
     paths: # HERE!
-      - 'store-advertisement/**'
+      - 'store-advertisement/ads_v1/**'
     branches: [ main ]
 
 jobs:
@@ -37,13 +37,13 @@ jobs:
         id: image-info
         env:
           ECR_REGISTRY: ${{ steps.login-ecr.outputs.registry }}
-          ECR_REPOSITORY: advertisement
+          ECR_REPOSITORY: ads_v1
           IMAGE_TAG: ${{ steps.image.outputs.version }}
         run: |
           echo "::set-output name=ecr_repository::$ECR_REPOSITORY"
           echo "::set-output name=image_tag::$IMAGE_TAG"
           pwd
-          cd store-advertisement
+          cd store-advertisement/ads_v1
           pwd
           docker build -t $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG .
           docker push $ECR_REGISTRY/$ECR_REPOSITORY:$IMAGE_TAG
