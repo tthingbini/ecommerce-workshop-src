@@ -6,7 +6,8 @@ ruby '2.7.2'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 5.2.5'
 # Use sqlite3 as the database for Active Record
-gem 'sqlite3'
+gem 'mysql2'
+#gem 'sqlite3'
 # Use Puma as the app server
 gem 'puma', '~> 3.12'
 # Use SCSS for stylesheets
@@ -21,7 +22,10 @@ gem 'jbuilder', '~> 2.5'
 # otherwise throwing exceptions
 gem 'sassc', '~> 2.1.0'
 # Use ActiveStorage variant
-# gem 'mini_magick', '~> 4.8'
+gem 'mini_magick', '~> 4.8'
+gem 'image_processing','~> 1.2'
+gem 'bootsnap','>= 1.4.2', require: false
+gem 'paperclip'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
@@ -48,6 +52,14 @@ gem 'httparty'
 gem 'amazing_print'
 gem 'rails_semantic_logger'
 
+
+gem 'vinsol_spree_themes', github: 'vinsol-spree-contrib/spree_themes', branch: 'master'
+
+gem 'spree_backend' # Rails admin panel (optional)
+
+gem 'spree_sample' # dummy data like products, taxons, etc
+
+gem 'sprockets-helpers', '~> 1.2.1'
 group :test, :development do
   gem 'bullet'
   gem 'pry-byebug'

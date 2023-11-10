@@ -7,7 +7,7 @@ FROM ruby:2.7.2-slim-buster
 # Update, upgrade, and cleanup debian packages
 RUN apt-get update && \
     apt-get upgrade --yes && \
-    apt-get install -y --no-install-recommends curl build-essential git-core libsqlite3-dev libpq-dev && \
+    apt-get install -y --no-install-recommends curl build-essential git-core libsqlite3-dev libpq-dev default-libmysqlclient-dev  imagemagick shared-mime-info && \
     curl -sL https://deb.nodesource.com/setup_12.x | bash - && \
     curl -sS https://dl.yarnpkg.com/debian/pubkey.gpg | apt-key add - && \
     echo "deb https://dl.yarnpkg.com/debian/ stable main" | tee /etc/apt/sources.list.d/yarn.list && \
