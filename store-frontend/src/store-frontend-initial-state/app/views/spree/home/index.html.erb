@@ -3,7 +3,7 @@
   <% if @discounts && @discounts['name'] && @discounts['code'] && @discounts['value'] %>
   <p>
   <h3><%= @discounts['name'] %>!</h3><br />
-  <strong>토요일에도 홍박사 '<%= @discounts['code']%>'
+  <strong> 금요일에도 홍박사 '<%= @discounts['code']%>'
   at checkout for a $<%= '%.2f' % @discounts['value'] %> discount</strong></p>
 <% else %>
   <!-- @discounts 값이 없거나 필요한 정보가 누락된 경우에 "할인 정보가 없습니다" 문구를 표시합니다. -->
