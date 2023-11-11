@@ -19,7 +19,7 @@
 <% if @ads && @ads['url'] && @ads['base64'] %>
   <center>
     <a href="<%= @ads['url'] %>">
-      <img src="data:image/png;base64,<%= @ads['base64'] %>" />
+      <img src="data:image/png;base64,<%= @ads['base64'] %>" style="width: 825px;" />
     </a>
   </center>
 <% else %>

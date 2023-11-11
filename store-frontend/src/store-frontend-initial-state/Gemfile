@@ -27,6 +27,9 @@ gem 'image_processing','~> 1.2'
 gem 'bootsnap','>= 1.4.2', require: false
 gem 'paperclip'
 
+gem 'bootstrap', '~> 4.3.1'
+#bootstrap
+
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
 

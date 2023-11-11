@@ -420,6 +420,7 @@ DEPENDENCIES
   amazing_print
   awesome_print
   bootsnap (>= 1.4.2)
+  bootstrap (~> 4.3.1)
   bullet
   byebug
   ddtrace (>= 0.4.1)
