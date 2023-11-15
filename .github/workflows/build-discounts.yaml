@@ -1,4 +1,4 @@
-name: Build Front
+name: Build Discounts
 
 on:
   push:
