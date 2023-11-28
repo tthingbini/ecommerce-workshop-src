@@ -74,5 +74,5 @@ application 추가
 
 정상적으로 설정이 마무리 되면 다음과 같이 **eksworkshop-cd-pipeline** 이 생성됩니다.
 
-<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/fa9e9518-6f24-4596-8568-d580837f7f6c">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/4ed73b8a-2dde-4cab-b2f8-93308f22556a">
 
