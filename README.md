@@ -65,14 +65,13 @@ application 추가
 
 **SOURCE** 섹션의 **Repository URL** 에는 앞서 생성한 **`k8s-manifest-repo`의 git 주소**, **Revision** 에는 `main`, **Path** 에는 `overlays/dev`를 입력 합니다.
 
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/b58fdf2d-e65d-40db-ad7a-ad1dc2162713/Untitled.png">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/6a631183-6063-4cce-8779-fef4a6a7607a">
 
 **DESTINATION** 섹션의 **Cluster URL**에는 `https://kubernetes.default.svc`, **Namespace** 에는 `default`를 입력 하고 상단의 **Create** 를 클릭 합니다.
 
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/8c22132f-8d9e-4ce8-a406-09d652ecdc90/Untitled.png">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/aa20acdf-2de2-4d66-8440-0266c263653b">
 
 정상적으로 설정이 마무리 되면 다음과 같이 **eksworkshop-cd-pipeline** 이 생성 됩니다.
 
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/91fda682-184a-421e-bbf1-4cb6c23bd174/Untitled.png">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/f77f5440-b1e0-47bd-86a1-6ab5aaffe695">
 
-수동으로 sync 한번 눌러주자
