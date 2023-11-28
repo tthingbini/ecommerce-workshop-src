@@ -55,6 +55,7 @@ echo $ARGO_PWD
 
 위에서 얻은 `$ARGOCD_SERVER`를 브라우저에서 오픈 합니다. 그리고 Username `admin` 을 입력하고 Password 는 `$ARGO_PWD` 값을 입력 합니다.
 
+
 ## **2. ArgoCD 설정**
 
 ### **(1)** Configure ArgoCD
