@@ -7,7 +7,7 @@
 ### CI/CD Pipeline입니다.
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/53cbfbfc-3d0f-46ca-a93a-baed378d0afe">
 
-## **ArgoCD 설치**
+## **1. ArgoCD 설치**
 
 ### **(1)** ArgoCD 를 EKS 클러스터에 설치
 
@@ -54,3 +54,25 @@ echo $ARGO_PWD
 ```
 
 위에서 얻은 `$ARGOCD_SERVER`를 브라우저에서 오픈 합니다. 그리고 Username `admin` 을 입력하고 Password 는 `$ARGO_PWD` 값을 입력 합니다.
+
+## **2. ArgoCD 설정**
+
+### **(1)** Configure ArgoCD
+
+application 추가
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/7eede06d-0035-495f-a96a-298d4b0e472f/Untitled.png)
+
+**SOURCE** 섹션의 **Repository URL** 에는 앞서 생성한 **`k8s-manifest-repo`의 git 주소**, **Revision** 에는 `main`, **Path** 에는 `overlays/dev`를 입력 합니다.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/b58fdf2d-e65d-40db-ad7a-ad1dc2162713/Untitled.png)
+
+**DESTINATION** 섹션의 **Cluster URL**에는 `https://kubernetes.default.svc`, **Namespace** 에는 `default`를 입력 하고 상단의 **Create** 를 클릭 합니다.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/8c22132f-8d9e-4ce8-a406-09d652ecdc90/Untitled.png)
+
+정상적으로 설정이 마무리 되면 다음과 같이 **eksworkshop-cd-pipeline** 이 생성 됩니다.
+
+![Untitled](https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/91fda682-184a-421e-bbf1-4cb6c23bd174/Untitled.png)
+
+수동으로 sync 한번 눌러주자
