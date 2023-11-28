@@ -78,6 +78,5 @@ application 추가
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/4ed73b8a-2dde-4cab-b2f8-93308f22556a">
 
 ### **3. LoadBalancer로 접속하면 정상적으로 배포되었음을 확인할 수 있습니다.**
-<br>
-
+---
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/4c059f08-cf10-4a07-8606-19ce3812f966">
