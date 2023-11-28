@@ -5,7 +5,7 @@
 ---
 
 ### CI/CD Pipeline입니다.
-<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/53cbfbfc-3d0f-46ca-a93a-baed378d0afe">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/d3d3b462-b439-46f8-bb71-f38cde5bfd57">
 
 ## **1. ArgoCD 설치**
 
