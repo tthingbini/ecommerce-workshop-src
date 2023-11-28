@@ -61,7 +61,7 @@ echo $ARGO_PWD
 
 application 추가
 
-<img src="https://prod-files-secure.s3.us-west-2.amazonaws.com/aa3e4e9a-7688-4506-a164-0452957bc6e6/7eede06d-0035-495f-a96a-298d4b0e472f/Untitled.png">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/ee0a07e7-68cf-4e20-bc79-05f05aaab7fd">
 
 **SOURCE** 섹션의 **Repository URL** 에는 앞서 생성한 **`k8s-manifest-repo`의 git 주소**, **Revision** 에는 `main`, **Path** 에는 `overlays/dev`를 입력 합니다.
 
