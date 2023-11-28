@@ -11,14 +11,14 @@
 
 ### **(1)** ArgoCD 를 EKS 클러스터에 설치
 
-다음을 실행 하여 ArgoCD를 eks cluster 에 설치 합니다.
+다음을 실행 하여 ArgoCD를 eks cluster 에 설치합니다.
 
 ```bash
 kubectl create namespace argocd
 kubectl apply -n argocd -f https://raw.githubusercontent.com/argoproj/argo-cd/stable/manifests/install.yaml
 ```
 
-본 실습에서 사용하지는 않지만, ArgoCD 는 CLI을 제공 합니다. 아래를 실행하여 ArgoCD CLI 를 설치 합니다.
+본 실습에서 사용하지는 않지만, ArgoCD 는 CLI을 제공 합니다. 아래를 실행하여 ArgoCD CLI 를 설치합니다.
 
 ```bash
 cd ~/environment
@@ -35,7 +35,7 @@ ArgoCD 서버는 기본적으로 퍼블릭 하게 노출되지 않습니다. 실
 kubectl patch svc argocd-server -n argocd -p '{"spec": {"type": "LoadBalancer"}}'
 ```
 
-3-4 분 정도 후 아래 명령을 통해 ArgoCD 접속이 가능한 ELB 주소를 얻습니다
+3-4 분 정도 후 아래 명령을 통해 ArgoCD 접속이 가능한 ELB 주소를 얻습니다.
 
 ```bash
 export ARGOCD_SERVER=`kubectl get svc argocd-server -n argocd -o json | jq --raw-output .status.loadBalancer.ingress[0].hostname`
@@ -53,7 +53,7 @@ echo $ARGO_PWD
 -wmyKxH2mzZX88Xo
 ```
 
-위에서 얻은 `$ARGOCD_SERVER`를 브라우저에서 오픈 합니다. 그리고 Username `admin` 을 입력하고 Password 는 `$ARGO_PWD` 값을 입력 합니다.
+위에서 얻은 `$ARGOCD_SERVER`를 브라우저에서 오픈 합니다. 그리고 Username `admin` 을 입력하고 Password 는 `$ARGO_PWD` 값을 입력합니다.
 
 
 ## **2. ArgoCD 설정**
@@ -64,15 +64,15 @@ application 추가
 
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/ee0a07e7-68cf-4e20-bc79-05f05aaab7fd">
 
-**SOURCE** 섹션의 **Repository URL** 에는 앞서 생성한 **`k8s-manifest-repo`의 git 주소**, **Revision** 에는 `main`, **Path** 에는 `overlays/dev`를 입력 합니다.
+**SOURCE** 섹션의 **Repository URL** 에는 앞서 생성한 **`k8s-manifest-repo`의 git 주소**, **Revision** 에는 `main`, **Path** 에는 `overlays/dev`를 입력합니다.
 
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/6a631183-6063-4cce-8779-fef4a6a7607a">
 
-**DESTINATION** 섹션의 **Cluster URL**에는 `https://kubernetes.default.svc`, **Namespace** 에는 `default`를 입력 하고 상단의 **Create** 를 클릭 합니다.
+**DESTINATION** 섹션의 **Cluster URL**에는 `https://kubernetes.default.svc`, **Namespace** 에는 `default`를 입력 하고 상단의 **Create** 를 클릭합니다.
 
 <img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/aa20acdf-2de2-4d66-8440-0266c263653b">
 
-정상적으로 설정이 마무리 되면 다음과 같이 **eksworkshop-cd-pipeline** 이 생성 됩니다.
+정상적으로 설정이 마무리 되면 다음과 같이 **eksworkshop-cd-pipeline** 이 생성됩니다.
 
-<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/f77f5440-b1e0-47bd-86a1-6ab5aaffe695">
+<img src="https://github.com/tthingbini/ecommerce-workshop-src/assets/137377076/fa9e9518-6f24-4596-8568-d580837f7f6c">
 
